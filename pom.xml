@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.itranswarp</groupId>
+	<artifactId>complex</artifactId>
+	<version>1.0.1</version>
+	<packaging>jar</packaging>
+
+	<name>complex</name>
+	<description>Sample Maven project for deploy test</description>
+	<url>https://github.com/michaelliao/complex</url>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Michael Liao</name>
+			<email>askxuefeng@gmail.com</email>
+			<organization>iTranswarp</organization>
+			<organizationUrl>http://www.liaoxuefeng.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com:michaelliao/complex.git</url>
+		<connection>scm:git:git@github.com:michaelliao/complex.git</connection>
+		<developerConnection>scm:git:git@github.com:michaelliao/complex.git</developerConnection>
+	</scm>
+
+	<properties>
+		<!-- source encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+		<java.version>11</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>github-snapshot</id>
+			<name>GitHub Snapshot</name>
+			<url>https://maven.pkg.github.com/michaelliao/complex-packages/</url>
+		</snapshotRepository>
+		<repository>
+			<id>github-release</id>
+			<name>GitHub Release</name>
+			<url>https://maven.pkg.github.com/michaelliao/complex-packages/</url>
+		</repository>
+	</distributionManagement>
+</project>
