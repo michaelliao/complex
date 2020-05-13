@@ -11,6 +11,10 @@ public class ComplexUtils {
 		return c.getReal() == 0 && c.getImaginary() == 0;
 	}
 
+	public static boolean isImageZero(Complex c) {
+		return c.getImaginary() == 0;
+	}
+
 	public static double abs(Complex c) {
 		double r = Math.sqrt(c.getReal() * c.getReal() + c.getImaginary() * c.getImaginary());
 		if (log.isDebugEnabled()) {
