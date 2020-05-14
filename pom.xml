@@ -4,19 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.itranswarp</groupId>
 	<artifactId>complex</artifactId>
-	<version>1.0.3</version>
+	<version>1.2.5</version>
 	<packaging>jar</packaging>
 
 	<name>complex</name>
-	<description>Sample Maven project for deploy test</description>
-	<url>https://github.com/michaelliao/complex</url>
-
-	<licenses>
-		<license>
-			<name>The Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-		</license>
-	</licenses>
 
 	<developers>
 		<developer>
@@ -26,12 +17,6 @@
 			<organizationUrl>http://www.liaoxuefeng.com</organizationUrl>
 		</developer>
 	</developers>
-
-	<scm>
-		<url>https://github.com:michaelliao/complex.git</url>
-		<connection>scm:git:git@github.com:michaelliao/complex.git</connection>
-		<developerConnection>scm:git:git@github.com:michaelliao/complex.git</developerConnection>
-	</scm>
 
 	<properties>
 		<!-- source encoding -->
@@ -51,15 +36,39 @@
 	</dependencies>
 
 	<distributionManagement>
-		<snapshotRepository>
-			<id>github-snapshot</id>
-			<name>GitHub Snapshot</name>
-			<url>https://maven.pkg.github.com/michaelliao/complex-packages/</url>
-		</snapshotRepository>
 		<repository>
-			<id>github-release</id>
+			<id>local-repo-release</id>
 			<name>GitHub Release</name>
-			<url>https://maven.pkg.github.com/michaelliao/complex-packages/</url>
+			<url>file://${project.basedir}/maven-repo</url>
 		</repository>
 	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
