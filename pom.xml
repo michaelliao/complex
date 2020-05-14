@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.itranswarp</groupId>
 	<artifactId>complex</artifactId>
-	<version>1.2.6</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>complex</name>
@@ -39,7 +39,7 @@
 		<repository>
 			<id>github-release</id>
 			<name>GitHub Release</name>
-			<url>https://maven.pkg.github.com/michaelliao/complex-packages</url>
+			<url>https://maven.pkg.github.com/michaelliao/complex</url>
 		</repository>
 	</distributionManagement>
 </project>
