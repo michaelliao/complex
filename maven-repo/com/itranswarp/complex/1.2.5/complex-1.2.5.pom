@@ -41,7 +41,7 @@
 		<repository>
 			<id>local-repo-release</id>
 			<name>GitHub Release</name>
-			<url>file://${project.basedir}/docs/mvn-repo</url>
+			<url>file://${project.basedir}/maven-repo</url>
 		</repository>
 	</distributionManagement>
 
